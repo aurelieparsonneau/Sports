@@ -1,0 +1,491 @@
+@import url(./reset.css);
+
+@font-face {
+  font-family: LiberationSans-bold;
+  src: url(../fonts/LiberationSans-Bold-webfont.ttf);
+}
+
+@font-face {
+  font-family: LiberationSans-regular;
+  src: url(../fonts/LiberationSans-Regular-webfont.ttf);
+}
+
+/* HEADER */
+header {
+  background-image: url(../img/background.jpg);
+}
+
+.container ul > * {
+  text-align: left;
+  margin: 0.5rem;
+}
+
+.container :first-child {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container p {
+  font-size: 1.8rem;
+  margin: 0.5rem 0 0 2rem;
+}
+
+.container :last-child {
+  display: flex;
+  flex-direction: row;
+}
+
+/* MAIN */
+main {
+  background-color: black;
+}
+
+/* CARTES PRODUITS */
+.produits {
+  background-color: rgb(216, 201, 201);
+  width: 90%;
+  align-content: center;
+  margin: auto;
+  position: relative;
+}
+
+.produits > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.produits > * {
+  position: relative;
+}
+
+.promo1::after {
+  content: "-45%";
+  position: absolute;
+  background-color: black;
+  padding: 1rem 2rem;
+  color: rgb(230, 164, 42);
+  top: 1%;
+  right: -2%;
+  font-size: 2rem;
+  border-radius: 15%;
+  -webkit-border-radius: 15%;
+  -moz-border-radius: 15%;
+  -ms-border-radius: 15%;
+  -o-border-radius: 15%;
+}
+
+.promo2::after {
+  content: "-45%";
+  position: absolute;
+  background-color: black;
+  padding: 1rem 2rem;
+  color: rgb(230, 164, 42);
+  top: 2%;
+  right: 0%;
+  font-size: 2rem;
+  border-radius: 15%;
+  -webkit-border-radius: 15%;
+  -moz-border-radius: 15%;
+  -ms-border-radius: 15%;
+  -o-border-radius: 15%;
+}
+
+.promo3::after {
+  content: "-45%";
+  position: absolute;
+  background-color: black;
+  padding: 1rem 2rem;
+  color: rgb(230, 164, 42);
+  top: 2%;
+  right: 0%;
+  font-size: 2rem;
+  border-radius: 15%;
+  -webkit-border-radius: 15%;
+  -moz-border-radius: 15%;
+  -ms-border-radius: 15%;
+  -o-border-radius: 15%;
+}
+
+.promo4::after {
+  content: "-45%";
+  position: absolute;
+  background-color: black;
+  padding: 1rem 2rem;
+  color: rgb(230, 164, 42);
+  top: 2%;
+  right: 0%;
+  font-size: 2rem;
+  border-radius: 15%;
+  -webkit-border-radius: 15%;
+  -moz-border-radius: 15%;
+  -ms-border-radius: 15%;
+  -o-border-radius: 15%;
+}
+
+.promo1,
+.promo2,
+.promo3,
+.promo4 {
+  text-align: center;
+}
+
+.titre {
+  font-size: 1.2rem;
+  text-align: center;
+  background-color: white;
+  padding: 1rem 2rem;
+  width: 90%;
+  margin-left: 2rem;
+}
+
+.produits button {
+  background-color: black;
+  color: white;
+  padding: 0.5rem 2rem;
+  justify-content: space-between;
+}
+
+.bouton_produit {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 0.5rem;
+}
+
+.bouton_produit :nth-child(2) {
+  text-decoration: line-through;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.bouton_produit :last-child {
+  color: rgb(230, 164, 42);
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+/* FOOTER */
+footer {
+  background-color:  rgb(89, 89, 90);
+}
+
+.nav {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  background-color: white;
+  padding: 0.5rem 1rem;
+}
+
+footer :nth-child(2) p {
+  font-size: 1rem;
+}
+
+.footer1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+}
+
+.footer1 img {
+  height: 3rem;
+}
+
+.barre {
+  height: 0.2rem;
+  background-color: rgb(141, 137, 137);
+  margin: 1rem 0;
+}
+
+.logo {
+  display: flex;
+  font-size: 2rem;
+  list-style-type: none;
+  justify-content: space-around;
+}
+
+.logo img {
+  height: 2rem;
+}
+
+.copyright {
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+/* DESKTOP */
+@media screen and (min-width: 576px) {
+  /* HEADER */
+  header {
+    background-image: url(../img/background.jpg);
+  }
+
+  .container {
+    width: 70%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .container ul > * {
+    margin: 0.5rem;
+  }
+
+  .container :first-child {
+    grid-row: 1/3;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    align-items: start;
+  }
+  .container :nth-child(2) {
+    grid-row: 1/2;
+    grid-column: 2/4;
+    text-align: right;
+  }
+
+  .container p {
+    font-size: 1.8rem;
+  }
+
+  .container :last-child {
+    grid-column: 2/4;
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 3rem;
+    align-items: end;
+    font-size: 1.4rem;
+  }
+
+  /* MAIN */
+  main {
+    background-color: black;
+  }
+
+  /* BANNER */
+  .banner {
+    text-align: center;
+    width: 70%;
+    margin: auto;
+  }
+
+  /* CARTES PRODUITS */
+  .produits {
+    background-color: rgb(216, 201, 201);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    width: 70%;
+    align-content: center;
+    margin: auto;
+  }
+
+  .produits > * {
+    aspect-ratio: 1/1;
+    position: relative;
+  }
+
+  .produit1 :first-child {
+    text-align: center;
+    position: relative;
+  }
+
+  .promo1::after {
+    content: "-45%";
+    position: absolute;
+    background-color: black;
+    padding: 1rem 2rem;
+    color: rgb(230, 164, 42);
+    top: 3%;
+    right: 0%;
+    font-size: 2rem;
+    border-radius: 15%;
+    -webkit-border-radius: 15%;
+    -moz-border-radius: 15%;
+    -ms-border-radius: 15%;
+    -o-border-radius: 15%;
+  }
+
+  .promo2::after {
+    content: "-45%";
+    position: absolute;
+    background-color: black;
+    padding: 1rem 2rem;
+    color: rgb(230, 164, 42);
+    top: 2%;
+    right: 0%;
+    font-size: 2rem;
+    border-radius: 15%;
+    -webkit-border-radius: 15%;
+    -moz-border-radius: 15%;
+    -ms-border-radius: 15%;
+    -o-border-radius: 15%;
+  }
+
+  .promo3::after {
+    content: "-45%";
+    position: absolute;
+    background-color: black;
+    padding: 1rem 2rem;
+    color: rgb(230, 164, 42);
+    top: 2%;
+    right: 0%;
+    font-size: 2rem;
+    border-radius: 15%;
+    -webkit-border-radius: 15%;
+    -moz-border-radius: 15%;
+    -ms-border-radius: 15%;
+    -o-border-radius: 15%;
+  }
+
+  .promo4::after {
+    content: "-45%";
+    position: absolute;
+    background-color: black;
+    padding: 1rem 2rem;
+    color: rgb(230, 164, 42);
+    top: 2%;
+    right: -2%;
+    font-size: 2rem;
+    border-radius: 15%;
+    -webkit-border-radius: 15%;
+    -moz-border-radius: 15%;
+    -ms-border-radius: 15%;
+    -o-border-radius: 15%;
+  }
+
+  .produit2 :first-child {
+    text-align: center;
+  }
+
+  .produit3 :first-child {
+    text-align: center;
+  }
+
+  .produit4 :first-child {
+    text-align: center;
+  }
+
+  .titre {
+    font-size: 1.2rem;
+    text-align: center;
+    background-color: white;
+    padding: 1rem 2rem;
+    width: 82%;
+    margin-left: 40px;
+  }
+
+  .produits button {
+    background-color: black;
+    color: white;
+    padding: 0.5rem 2rem;
+    justify-content: space-between;
+  }
+
+  .bouton_produit {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 0.5rem;
+  }
+
+  .bouton_produit :nth-child(2) {
+    text-decoration: line-through;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+
+  .bouton_produit :last-child {
+    color: rgb(230, 164, 42);
+    font-weight: bold;
+    font-size: 2rem;
+  }
+
+  /* FOOTER */
+  footer {
+    background-color:  rgb(89, 89, 90);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+  .nav {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    background-color: white;
+    padding: 0.5rem 1rem;
+  }
+
+  footer > * {
+    width: 70%;
+    margin: auto;
+  }
+
+  footer :first-child {
+    grid-row: 1/2;
+    grid-column: 1/5;
+  }
+
+  footer :nth-child(2) {
+    grid-column: 1/5;
+    grid-row: 2/3;
+  }
+
+  footer :nth-child(3) {
+    grid-row: 3/4;
+    grid-column: 2/4;
+  }
+
+  footer :nth-child(4) {
+    grid-row: 4/5;
+    grid-column: 1/5;
+  }
+
+  footer :last-child {
+    grid-column: 1/5;
+  }
+
+  .footer1 {
+    display: flex;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  footer :nth-child(2) p {
+    font-size: 1rem;
+  }
+
+  .footer1 img {
+    height: 3rem;
+  }
+
+  .barre {
+    height: 0.3rem;
+    width: 100%;
+  }
+
+  .logo {
+    grid-row: 3/4;
+    grid-column: 1/5;
+    width: 20%;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    align-items: center;
+    height: 2rem;
+  }
+
+  .copyright {
+    width: 20%;
+    font-size: 1.3rem;
+    text-align: center;
+  }
+}
